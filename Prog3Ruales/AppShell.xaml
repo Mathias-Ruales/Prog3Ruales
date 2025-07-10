@@ -3,13 +3,23 @@
     x:Class="Prog3Ruales.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Prog3Ruales"
+    xmlns:local="clr-namespace:Prog3Ruales.Views"
     Shell.FlyoutBehavior="Flyout"
     Title="Prog3Ruales">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent
+            Title="Agregar Pelicula"
+            ContentTemplate="{DataTemplate local:AgregarPeliculasPage}">
+        </ShellContent>
+        <ShellContent
+            Title="Lista de Peliculas"
+            ContentTemplate="{DataTemplate local:ListaPeliculasPage}">
+        </ShellContent>
+        <ShellContent
+            Title="Logs"
+            ContentTemplate="{DataTemplate local:LogsPage}">
+        </ShellContent>
+    </TabBar>
 
 </Shell>
